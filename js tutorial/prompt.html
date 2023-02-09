@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function CreateClik(){
+        result=prompt("Enter Folder Name");
+        if(result=="")
+        {
+            alert("Name can't Be Empty");
+        }
+        else if(result==null)
+        {
+            alert("You Canceled..");
+        }
+        else
+        {
+        document.querySelector("p").innerHTML+="Folder Created:" +result+ "<br>";
+        }
+    }
+    </script>
+</head>
+<body>
+    <button onclick="CreateClik()">Create New Folder</button>
+    <p></p>
+</body>
+</html>

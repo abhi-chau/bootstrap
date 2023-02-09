@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <style>
+       body{
+        background-image: url("https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/netflixteaser.png");
+        background-size: cover;
+        font-family: Arial;
+        }
+        .shade{
+        background-color: rgba(0,0,0,0.4);
+        }
+        .section-back{
+          background-color: rgba(0,0,0,0.9);
+         }
+        hr{
+          color:rgb(67,67,67)
+        }
+        .list{
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+        }
+        .list h1{
+          color: #fff;
+          font-size: 3rem;
+          padding: 3rem 0 4rem 0;
+        }
+        .title{
+          background: #303030;
+          padding: 20px 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: #fff;
+          font-size: 1.7rem;
+          font-weight: 400;
+          text-decoration: none;
+        }
+        .icon{
+          width: 20px;
+          position: relative;
+        }
+        .icon::before ,.icon::after{
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 3px;
+          background: #fff;
+          top: -1.5px;
+        }
+         .icon::after{
+          transform: rotate(90deg);
+          transition: 0.5s linear;
+         } 
+         .text{
+          background: #303030;
+          line-height: 35px;
+          margin: 3px 0;
+          opacity: 0;
+          height: 0;
+          color: #fff;
+          font-size: 1.7rem;
+          font-weight: 400;
+         }  
+         .item:target .text{
+          opacity: 1;
+          height: auto;
+          padding: 20px 30px;
+          margin: 0;
+          border-top: 2px solid #000;
+          margin-bottom: 6px;
+         }
+         .item:target  .icon::after{
+          transform: rotatey(90deg);
+         }
+         .font{
+          margin-top: 10px;
+          font-size: 18px;
+          text-align: center;
+         }
+         .footer{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: auto;
+          padding: 4rem 0;
+         }
+         .footer .one{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: auto;
+         width: 25%;
+         }
+         .footer .two{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: auto;
+          width: 25%;
+         }
+         .footer .one li{
+          padding: 7px 0;
+         }
+         .footer .two li{
+          padding: 7px 0;
+         }
+         .footer .one li a{
+          color: #ccc;
+          text-decoration: none;
+         }
+         .footer .two li a{
+          color: #ccc;
+          text-decoration: none;
+         }
+        </style>
+</head>
+<body>
+ <div class="shade">
+ <header class="d-flex justify-content-between p-2">
+  <div>
+    <font face="Arial Black" size="7" color="red">N</font>
+    <font face="Arial Black" size="6" color="red">E</font>
+    <font face="Arial Black" size="6" color="red">T</font>
+    <font face="Arial Black" size="6" color="red">F</font>
+    <font face="Arial Black" size="6" color="red">L</font>
+    <font face="Arial Black" size="6" color="red">I</font>
+    <font face="Arial Black" size="7" color="red">X</font>
+  </div>
+  <div class="d-flex">
+   <div class="dropdown">
+    <div class="dropdown-header">
+     <button data-bs-target="#items" data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle">
+      <span class="bi bi-globe"></span>
+      <span>Language</span>
+     </button>
+     <div class="dropdown-menu dropdown-menu-dark" id="items">
+      <div class="dropdown-item"><span class="dropdown-text">English</span></div>
+      <div class="dropdown-item"><span class="dropdown-text">हिंदी</span></div>
+     </div>
+    </div>
+   </div>
+   <div class="ms-3">
+   <button class="btn btn-danger">Sign in</button>
+   </div>
+  </div>
+ </header>
+ <section>
+  <main class="text-light d-flex justify-content-center text-center align-items-center">
+  <div style="width:550px">
+  <h1>Unlimited movies, TV shows and more.</h1>
+  <h4 class="mt-2">Watch anywhere. Cancel anytime.</h4>
+  <p class="mt-4">Ready to watch? Enter your email to create or restart your membership.</p>
+  <div class="input-group input-group-lg">
+  <input class="form-control" type="email" placeholder="Your email address">
+  <button class="btn btn-danger">
+   <span>Get Started</span>
+   <span class="bi bi-chevron-right"></span>
+  </button>
+  </div>
+  </div>
+  </main>
+ </section>
+ <section>
+ <div class="section-back text-white">
+  <hr noshade size="10" color="gray">
+  <div class="row">
+    <div class="col-md-6 mt-5">
+        <h1 class="w-50">Enjoy on your TV.</h1>
+        <h3 class="w-75">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h3>
+      </div>
+      <div class="col-md-6">
+        <img src="./public/images/Banners-1.png" alt="" class="img-fluid">
+      </div>
+   </div>
+   <hr noshade size="10" color="gray">
+   <div class="row">
+    <div class="col-md-6 mt-4">
+      <img src="./public/images/Banners-2.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-6 mt-5">
+        <h1 class="w-50">Download your shows to watch offline.</h1>
+        <h3 class="w-75">Save your favourites easily and always have something to watch.</h3>
+      </div>
+   </div>
+   <hr noshade size="10" color="gray">
+   <div class="row">
+    <div class="col-md-6 mt-5">
+        <h1 class="w-50">Watch everywhere.</h1>
+        <h3 class="w-75">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h3>
+      </div>
+      <div class="col-md-6">
+        <img src="./public/images/Banners-3.png" alt="" class="img-fluid">
+      </div>
+   </div>
+   <hr noshade size="10" color="gray">
+   <div class="row">
+    <div class="col-md-6 mt-4">
+      <img src="./public/images/Banners-4.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-6 mt-5">
+        <h1 class="w-50">Create profiles for children..</h1>
+        <h3 class="w-75">Send children on adventures with their favourite characters in a space made just for them—free with your membership.</h3>
+      </div>
+   </div>
+<hr noshade size="10" color="gray">
+<div class="list">
+  <h1>Frequently Asked Questions?</h1>
+  <div class="accordion-menu">
+   <div class="item" id="item1">
+    <a href="#item1" class="title">
+      <span>What is Netflix?</span>
+      <i class="icon"></i>
+    </a>
+    <p class="text">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+      <br>
+      <br>
+      You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+    </p>
+   </div>
+
+   <div class="item" id="item2">
+    <a href="#item2" class="title">
+      <span>How much does Netflix cost?</span>
+      <i class="icon"></i>
+    </a>
+    <p class="text">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.
+    </p>
+   </div>
+
+   <div class="item" id="item3">
+    <a href="#item3" class="title">
+      <span>Where can I watch?</span>
+      <i class="icon"></i>
+    </a>
+    <p class="text">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+      <br>
+      <br>
+      You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price.  
+    </p>
+   </div>
+
+   <div class="item" id="item4">
+    <a href="#item4" class="title">
+      <span>How do I cancel?</span>
+      <i class="icon"></i>
+    </a>
+    <p class="text">Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+    </p>
+   </div>
+
+   <div class="item" id="item5">
+    <a href="#item5" class="title">
+      <span>What can I watch on Netflix?</span>
+      <i class="icon"></i>
+    </a>
+    <p class="text">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+    </p>
+   </div>
+
+   <div class="item" id="item6">
+    <a href="#item6" class="title">
+      <span>Is Netflix good for kids?</span>
+      <i class="icon"></i>
+    </a>
+    <p class="text">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+    </p>
+   </div>
+   <p class="font">Ready to watch? Enter your email to create or restart your membership.
+  </p>
+  <div class="input-group input-group-lg">
+    <input class="form-control" type="email" placeholder="Your email address">
+    <button class="btn btn-danger">
+     <span>Try 30 Days free</span>
+     <span class="bi bi-chevron-right"></span>
+    </button>
+    </div> 
+  </div>
+  </div>
+  <hr noshade size="10" color="gray">
+  <div class="footer">
+   <div class="one">
+   <ul class="items">
+    <li><a href="#">Faq</a></li>
+    <li><a href="#">Investor Relations</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Speed Test</a></li>
+   </ul>
+   <ul class="items">
+    <li><a href="#">Help center</a></li>
+    <li><a href="#">Jobs</a></li>
+    <li><a href="#">Cookie Preferences</a></li>
+    <li><a href="#">Legal Notices</a></li>
+   </ul>
+   </div>
+   <div class="two">
+    <ul class="items">
+     <li><a href="#">Account</a></li>
+     <li><a href="#">Ways to watch</a></li>
+     <li><a href="#">Coprate Information</a></li>
+     <li><a href="#">Only On Netflix</a></li>
+    </ul>
+    <ul class="items">
+     <li><a href="#">Media center</a></li>
+     <li><a href="#">Terms of use</a></li>
+     <li><a href="#">Contact us</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+ </div>
+</section>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

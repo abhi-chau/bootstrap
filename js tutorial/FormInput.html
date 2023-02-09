@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function AddClick(){
+            document.getElementById("detailscontainer").style.display = "block";
+            document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+            document.getElementById("lblPrice").innerHTML = document.getElementById("txtPrice").value;
+            document.getElementById("lblCity").innerHTML = document.getElementById("lstcities").value;
+
+            stockCheckbox = document.getElementById("optStock");
+            stockMsg = "";
+
+            if(stockCheckbox.checked){
+             stockMsg = "Available";
+            }else{
+                stockMsg = "Out of Stock"
+            }
+
+            document.getElementById("lblStock").innerHTML = stockMsg ;
+        }
+    </script>
+</head>
+<body class="container-fluid">
+ <button class="btn btn-primary mt-2" data-bs-target="#register" data-bs-toggle="modal">Add Product</button>
+ <div class="modal fade" id="register">
+ <div class="modal-dialog modal-dialog-centered">
+ <div class="modal-content">
+ <div class="modal-header">
+<h2>Add New Product</h2>
+<button data-bs-dismiss="modal" class="btn-close"></button>
+ </div>
+ <div class="modal-body">
+    <dl>
+        <dt>Name</dt>
+        <dd><input type="text" id="txtName" class="form-control"></dd>
+        <dt>Price</dt>
+        <dd><input type="text" id="txtPrice" class="form-control"></dd>
+        <dt>Shipped To</dt>
+        <dd>
+            <select id="lstCities" class="form-select">
+                <option>Delhi</option>
+                <option>Hyd</option>
+            </select>
+        </dd>
+        <dt>Stock</dt>
+        <dd class="form-switch">
+            <input type="checkbox" class="form-check-input" id="optstock">Available
+        </dd>
+    </dl>
+ </div>
+ <div class="modal-footer">
+    <button id="btnAdd" onclick="AddClick()" data-bs-dismiss="modal" class="btn btn-primary">Add</button>
+ <button data-bs-dismiss="modal" class="btn btn-danger">cancel</button>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div id="detailsContainer" style="display:none">
+<h3>Product Details</h3>
+<dl class="row">
+<dt class="col-3">Product Name</dt>
+<dd class="col-9" id="lblName"></dd>
+<dt class="col-3">Price</dt>
+<dd class="col-9" id="lblPrice"></dd>
+<dt class="col-3">Shipped To</dt>
+<dd class="col-9" id="lblCity"></dd>
+<dt class="col-3">Stock</dt>
+<dd class="col-9" id="lblStock"></dd>
+</dl>
+<button onclick="EditClick()" data-bs-register="#register" data-bs-target="modal" class="btn btn-link"><span class="bi bi-pen-fill"></span>Edit</button>
+ </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
